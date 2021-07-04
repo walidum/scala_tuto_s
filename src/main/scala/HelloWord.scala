@@ -19,15 +19,11 @@ object HelloWord {
     }
   }
 
-  def main(args: Array[String]): Unit = {
-    val sum = (a: Int, b: Int, c: Int) => a + b + c
-    val f = sum(10, 30, _: Int)
-    println(f(100))
+  var num = 30
+  val add = (x: Int) => x + num
 
-    val date = new Date
-    val newLog = Log.log(date, _: String);
-    newLog("Message 01 ")
-    newLog("Message 02")
-    newLog("Message 03 ")
+  def main(args: Array[String]): Unit = {
+    num = 200
+    println(add(2))
   }
 }
