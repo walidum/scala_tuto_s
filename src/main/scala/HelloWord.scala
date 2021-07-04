@@ -22,8 +22,9 @@ object HelloWord {
   var num = 30
   val add = (x: Int) => x + num
 
+  def add2(x: Int) = (y: Int) => x + y
+
   def main(args: Array[String]): Unit = {
-    num = 200
-    println(add(2))
+    println(add2(20)(3))
   }
 }
