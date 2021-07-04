@@ -8,8 +8,12 @@ object HelloWord {
     }
 
     val list = List(1, 2, 454, 4787, 78, 7, 787, 87, 87, 8, 7, 8)
-    for (ele <- list; if ele > 10) {
-      println(ele)
+    val res = for {ele <- list; if ele > 10} yield {
+      ele * 2
     }
+
+    println(res)
+
+
   }
 }
