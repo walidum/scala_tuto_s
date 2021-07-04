@@ -72,7 +72,15 @@ object HelloWord {
     }
   }
 
+  object Options {
+    val lst = List(11, 21, 122)
+
+    def find = () => {
+      println(lst.filter(_ > 14))
+    }
+  }
+
   def main(args: Array[String]): Unit = {
-    Tuples.print()
+    Options.find()
   }
 }
