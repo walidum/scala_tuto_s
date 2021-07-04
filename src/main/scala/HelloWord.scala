@@ -80,7 +80,18 @@ object HelloWord {
     }
   }
 
+  object Classes {
+    class User(private var name: String, var lastName: String) {
+      def getName = () => name
+    };
+
+    def print = () => {
+      val user = new User("sds", "sdsd")
+      println(user.getName())
+    }
+  }
+
   def main(args: Array[String]): Unit = {
-    Options.find()
+    Classes.print()
   }
 }
