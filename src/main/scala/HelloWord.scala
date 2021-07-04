@@ -49,10 +49,11 @@ object HelloWord {
   }
 
   object Maps {
-    val map: Map[Int, String] = Map(121 -> "text", 122 -> "dfdsfsd", 545 -> "dfdsfsd")
+    var map: Map[Int, String] = Map(121 -> "text", 122 -> "dfdsfsd", 545 -> "dfdsfsd")
     val map2: Map[Int, String] = Map(23 -> "text", 11 -> "dfdsfsd", 58 -> "dfdsfsd")
 
     def print = () => {
+      map = map + (585 -> "dsdsd")
       println(map.isEmpty)
       println(map(121))
       println(map.size)
@@ -61,7 +62,17 @@ object HelloWord {
     }
   }
 
+  object Tuples {
+    val tuple1 = (1221, "sdsd", true)
+    val tuple3 = new Tuple3(1, (232, false), true)
+
+    def print = () => {
+      tuple3.productIterator.foreach(e => println(e))
+      println(tuple1)
+    }
+  }
+
   def main(args: Array[String]): Unit = {
-    Maps.print()
+    Tuples.print()
   }
 }
