@@ -42,10 +42,26 @@ object HelloWord {
       list = 12 :: list
       list = list :+ 50
       list.foreach(e => println(e))
+      for (one <- list) {
+
+      }
+    }
+  }
+
+  object Maps {
+    val map: Map[Int, String] = Map(121 -> "text", 122 -> "dfdsfsd", 545 -> "dfdsfsd")
+    val map2: Map[Int, String] = Map(23 -> "text", 11 -> "dfdsfsd", 58 -> "dfdsfsd")
+
+    def print = () => {
+      println(map.isEmpty)
+      println(map(121))
+      println(map.size)
+      println(map ++ map2)
+      println(map)
     }
   }
 
   def main(args: Array[String]): Unit = {
-    Lists.printList()
+    Maps.print()
   }
 }
