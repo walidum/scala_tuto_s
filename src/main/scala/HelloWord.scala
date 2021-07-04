@@ -1,13 +1,15 @@
 object HelloWord {
   def main(args: Array[String]): Unit = {
-    var x = 0
-    while (x < 5) {
-      println(s"x = $x")
-      x += 1
+    for (a <- 1 to 10) {
+      println(s" value of a  = $a")
     }
-    do {
-      println(s"new x = $x")
-      x += 1
-    } while (x < 10)
+    for (a <- 1 until 10) {
+      println(s" value of a  = $a")
+    }
+
+    val list = List(1, 2, 454, 4787, 78, 7, 787, 87, 87, 8, 7, 8)
+    for (ele <- list; if ele > 10) {
+      println(ele)
+    }
   }
 }
